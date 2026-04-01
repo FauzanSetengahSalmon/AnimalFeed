@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Pakan Ternak</string>
+    <string name="intro">Pilih jenis ternak dan masukkan bobot badan untuk menghitung kebutuhan pakan harian:</string>
+    <string name="pilih_ternak">Pilih Jenis Ternak</string>
+    <string name="bobot_label">Bobot (kg)</string>
+    <string name="hitung">Hitung</string>
+    <string name="reset">Reset</string>
+    <string name="input_invalid">Tidak boleh kosong atau nol.</string>
+    <string name="bagikan">Bagikan</string>
+    <string name="tentang_app">Tentang Aplikasi</string>
+    <string name="riwayat">Riwayat Perhitungan</string>
+    <string name="kembali">Kembali</string>
+    <string name="history">Riwayat</string>
+    <string name="data_kosong">Belum ada riwayat perhitungan.</string>
+    <string name="copyright">Ternak Hub merupakan aplikasi untuk membantu peternak menghitung estimasi kebutuhan pakan hijauan dan konsentrat secara cepat dan akurat.\n\nCopyright © 2026 Fauzan. All rights reserved.</string>
+</resources>
