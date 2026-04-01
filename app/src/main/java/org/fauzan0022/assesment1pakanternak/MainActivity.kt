@@ -19,7 +19,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             Assesment1PakanTernakTheme {
-
+                setupNavGraph()
             }
         }
     }

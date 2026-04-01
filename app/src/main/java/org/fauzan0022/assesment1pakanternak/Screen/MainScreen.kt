@@ -54,12 +54,14 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
 import org.fauzan0022.assesment1pakanternak.R
 import org.fauzan0022.assesment1pakanternak.ui.theme.Assesment1PakanTernakTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun MainScreen() {
+fun MainScreen(navController: NavHostController) {
     Scaffold(
         topBar = {
             TopAppBar(
@@ -77,7 +79,7 @@ fun MainScreen() {
                     IconButton(onClick = {}) {
                         Icon(Icons.Outlined.History, contentDescription = stringResource(R.string.history))
                     }
-                    IconButton(onClick = { }) {
+                    IconButton(onClick = {navController.navigate(Screen.About.route)}) {
                         Icon(Icons.Outlined.Info, contentDescription = stringResource(R.string.tentang_app))
                     }
                 },
@@ -387,6 +389,6 @@ private fun shareData(context: Context, message: String) {
 @Composable
 fun GreetingPreview() {
     Assesment1PakanTernakTheme {
-        MainScreen()
+        MainScreen(rememberNavController())
     }
 }
