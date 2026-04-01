@@ -1,5 +1,6 @@
 package org.fauzan0022.assesment1pakanternak.Screen
 
+import org.fauzan0022.assesment1pakanternak.R
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -17,7 +18,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
-import org.fauzan0022.assesment1pakanternak.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

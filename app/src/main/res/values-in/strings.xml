@@ -14,6 +14,7 @@
     <string name="kembali">Kembali</string>
     <string name="tujuan">Tujuan</string>
     <string name="history">Riwayat</string>
+    <string name="hasil_perhitungan">Hasil Perhitungan</string>
     <string name="data_kosong">Belum ada riwayat perhitungan.</string>
     <string name="copyright">Ternak Hub merupakan aplikasi untuk membantu peternak menghitung estimasi kebutuhan pakan hijauan dan konsentrat secara cepat dan akurat.\n\nCopyright © 2026 Fauzan. All rights reserved.</string>
 </resources>

@@ -39,6 +39,7 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -61,7 +62,7 @@ import org.fauzan0022.assesment1pakanternak.ui.theme.Assesment1PakanTernakTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun MainScreen(navController: NavHostController) {
+fun MainScreen(navController: NavHostController, historyList: MutableList<String>) {
     Scaffold(
         topBar = {
             TopAppBar(
@@ -76,7 +77,7 @@ fun MainScreen(navController: NavHostController) {
                     containerColor = Color.White
                 ),
                 actions = {
-                    IconButton(onClick = {}) {
+                    IconButton(onClick = {navController.navigate(Screen.History.route)}) {
                         Icon(Icons.Outlined.History, contentDescription = stringResource(R.string.history))
                     }
                     IconButton(onClick = {navController.navigate(Screen.About.route)}) {
@@ -89,13 +90,15 @@ fun MainScreen(navController: NavHostController) {
         containerColor = Color(0xFFF5F5F5)
     ) { innerPadding ->
         ScreenContent(
-            modifier = Modifier.padding(innerPadding)
+            modifier = Modifier.padding(innerPadding),
+            historyList =historyList
         )
     }
 }
 @Composable
 fun ScreenContent(
     modifier: Modifier = Modifier,
+    historyList: MutableList<String>
 ) {
     val ternakOptions = listOf("Sapi Potong", "Sapi Perah", "Kambing", "Domba", "Babi")
     val tujuanOptions = listOf("Penggemukan", "Pembibitan")
@@ -153,7 +156,7 @@ fun ScreenContent(
                             Icon(
                                 if (expandedTernak) Icons.Filled.KeyboardArrowUp
                                 else Icons.Filled.KeyboardArrowDown,
-                                null
+                                contentDescription = null
                             )
                         },
                         modifier = Modifier.fillMaxWidth(),
@@ -192,7 +195,7 @@ fun ScreenContent(
                             Icon(
                                 if (expandedTujuan) Icons.Filled.KeyboardArrowUp
                                 else Icons.Filled.KeyboardArrowDown,
-                                null
+                                contentDescription = null
                             )
                         },
                         modifier = Modifier.fillMaxWidth(),
@@ -269,6 +272,7 @@ fun ScreenContent(
 
                             error = false
                             hasil = hitungPakan(pilihTernak, b, u, tujuan)
+                            historyList.add(0, hasil)
                         },
                         modifier = Modifier.weight(1f)
                     ) {
@@ -387,8 +391,11 @@ private fun shareData(context: Context, message: String) {
 
 @Preview(showBackground = true)
 @Composable
-fun GreetingPreview() {
+fun PreviewApp() {
     Assesment1PakanTernakTheme {
-        MainScreen(rememberNavController())
+        MainScreen(
+            navController = rememberNavController(),
+            historyList = remember { mutableStateListOf() }
+        )
     }
 }
