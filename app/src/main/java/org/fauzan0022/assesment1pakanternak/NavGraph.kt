@@ -8,26 +8,25 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import org.fauzan0022.assesment1pakanternak.Screen.AboutScreen
-import org.fauzan0022.assesment1pakanternak.Screen.HistoryScreen
 import org.fauzan0022.assesment1pakanternak.Screen.MainScreen
 import org.fauzan0022.assesment1pakanternak.Screen.Screen
+import org.fauzan0022.assesment1pakanternak.Screen.TipsScreen
 
 @Composable
 fun setupNavGraph(navController: NavHostController = rememberNavController()) {
-    val historyList = remember { mutableStateListOf<String>() }
 
     NavHost(
         navController = navController,
         startDestination = Screen.Home.route
     ) {
         composable(route = Screen.Home.route) {
-            MainScreen(navController, historyList)
+            MainScreen(navController)
         }
         composable(route = Screen.About.route) {
             AboutScreen(navController)
         }
-        composable(route = Screen.History.route) {
-            HistoryScreen(navController, historyList)
+        composable(route = Screen.Tips.route) {
+            TipsScreen(navController)
         }
     }
 }
