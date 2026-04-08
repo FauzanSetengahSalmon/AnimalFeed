@@ -9,10 +9,9 @@
     <string name="input_invalid">Input cannot be empty or zero.</string>
     <string name="bagikan">Share Result</string>
     <string name="tentang_app">About Application</string>
-    <string name="riwayat">Calculation History</string>
     <string name="kembali">Back</string>
     <string name="tujuan">objective</string>
-    <string name="history">History</string>
+    <string name="tips">Tips</string>
     <string name="hasil_perhitungan">Calculation Results</string>
     <string name="data_kosong">There is no calculation history yet.</string>
     <string name="copyright">TernakHub \nCopyright © 2026 Fauzan.\nA professional livestock feed calculator app based on biomass standards.\n\nCreated for Android Development Fundamentals.</string>

@@ -51,7 +51,7 @@ fun MainScreen(navController: NavHostController) {
 
                 actions = {
                     IconButton(onClick = { navController.navigate(Screen.Tips.route)}) {
-                        Icon(Icons.Outlined.Lightbulb, contentDescription = "Tips")
+                        Icon(Icons.Outlined.Lightbulb, contentDescription = stringResource(R.string.tips))
                     }
                     IconButton(onClick = { navController.navigate(Screen.About.route) }) {
                         Icon(Icons.Outlined.Info, contentDescription = stringResource(R.string.tentang_app))
